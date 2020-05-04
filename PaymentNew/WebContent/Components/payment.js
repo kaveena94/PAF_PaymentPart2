@@ -28,6 +28,7 @@ $(document).on("click", "#btnSave", function(event)
 	
 	//$("#formPayment").submit();
 	
+	
 	var type = ($("#hidPaymentIDSave").val() == "") ? "POST" : "PUT";
 	
 	$.ajax(
@@ -40,7 +41,12 @@ $(document).on("click", "#btnSave", function(event)
 					onPaymentSaveComplete(response.responseText, status);
 				}
 			});
+	
+	
  });
+
+	
+
 
 function onPaymentSaveComplete(response, status) {
 	if (status == "success")

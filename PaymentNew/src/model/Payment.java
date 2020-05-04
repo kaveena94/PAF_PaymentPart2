@@ -33,7 +33,7 @@ public class Payment {
 				return "Error while connecting to the database for reading.";
 			}
 			// Prepare the html table to be displayed
-			output = "<table border=\\\"1\\\"><th>Pay User Name</th><th>Pay Amount</th><th>Pay Date</th><th>Pay CardType</th><th>Pay CardNo</th><th>Update</th><th>Remove</th></tr>";
+			output = "<table border='1'><th>Pay User Name</th><th>Pay Amount</th><th>Pay Date</th><th>Pay CardType</th><th>Pay CardNo</th><th>Update</th><th>Remove</th></tr>";
 			
 			String query = "select * from payment2";
 			Statement stmt = con.createStatement();

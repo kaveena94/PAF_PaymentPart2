@@ -12,21 +12,23 @@
 <script src="Components/payment.js"></script>
 </head>
 <body>
+<div style="background-image: url('img/imgNew.jpg');">
 	<div class="container">  
 		<div class="row">
 			<div class="col-6">
 				<h1>Payment Details</h1>
-				<form id="formPayment" name="formPayment">
+				<p>Please fill in this form to payment details.</p>
+				<form id="formPayment" name="formPayment" style="font-weight: bold">
 					Pay User Name: 
-					<input id="payName" name="payName" type="text" class="form-control form-control-sm"> 
+					<input id="payName" name="payName" type="text" placeholder="Enter the user name" class="form-control form-control-sm" >
 					<br> Pay Amount:
-					<input id="payAmount" name="payAmount" type="text" class="form-control form-control-sm"> 
+					<input id="payAmount" name="payAmount" type="text" placeholder="Enter the amount" class="form-control form-control-sm"> 
 					<br> Pay Date: 
-					<input id="payDate" name="payDate" type="text" class="form-control form-control-sm"> 
+					<input id="payDate" name="payDate" type="text" placeholder="Enter the date" class="form-control form-control-sm"> 
 					<br> Pay CardType: 
-					<input id="payCardType" name="payCardType" type="text" class="form-control form-control-sm">
+					<input id="payCardType" name="payCardType" type="text" placeholder="Enter the card type" class="form-control form-control-sm">
 					<br> Pay CardNo: 
-					<input id="payCardNo" name="payCardNo" type="text" class="form-control form-control-sm">
+					<input id="payCardNo" name="payCardNo" type="text" placeholder="Enter the card number" class="form-control form-control-sm">
 					<br> 
 					<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary">
 					<input type="hidden" id="hidPaymentIDSave" name="hidPaymentIDSave" value="">
@@ -43,6 +45,6 @@
 			</div>
 		</div>
 	</div>
-
+</div>
 </body>
 </html>

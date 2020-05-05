@@ -28,7 +28,6 @@ $(document).on("click", "#btnSave", function(event)
 	
 	//$("#formPayment").submit();
 	
-	
 	var type = ($("#hidPaymentIDSave").val() == "") ? "POST" : "PUT";
 	
 	$.ajax(
@@ -41,12 +40,7 @@ $(document).on("click", "#btnSave", function(event)
 					onPaymentSaveComplete(response.responseText, status);
 				}
 			});
-	
-	
  });
-
-	
-
 
 function onPaymentSaveComplete(response, status) {
 	if (status == "success")
@@ -139,52 +133,39 @@ function onPaymentDeleteComplete(response, status) {
 	
 }
 
-//CLIENT-MODEL================================================================
-function validatePaymentForm()
-{
-	// name
-	if ($("#payName").val().trim() == "")
-	{
-		return "Insert name.";
+//CLIENT-MODEL
+function validatePaymentForm() {
+
+	if ($("#payName").val().trim() == "") {
+		return "Insert pay name.";
 	}
 	
-	// amount
-	if ($("#payAmount").val().trim() == "")
-	{
-		return "Insert amount.";
+			if ($("#payAmount").val().trim() == "") {
+		return "Insert pay amount.";
 	}
 
 	// is numerical value
 	var tmpPrice = $("#payAmount").val().trim();
 	if (!$.isNumeric(tmpPrice))
 	{
-		return "Insert a numerical value for amount.";
+		return "Insert a numerical value for pay amount.";
 	}	
 
-	// convert to decimal amount
+	// convert to decimal price
 	$("#payAmount").val(parseFloat(tmpPrice).toFixed(2));
 
-	// date
-	if ($("#payDate").val().trim() == "")
-	{
-		return "Insert date.";
+
+	if ($("#payDate").val().trim() == "") {
+		return "Insert pay date.";
+	}
+
+	if ($("#payCardType").val().trim() == "") {
+		return "Insert pay card type.";
 	}
 	
-	// card type
-	if ($("#payCardType").val().trim() == "")
-	{
-		return "Insert card type.";
+	if ($("#payCardNo").val().trim() == "") {
+		return "Insert pay card no.";
 	}
-	
-	// card no
-	if ($("#payCardNo").val().trim() == "")
-	{
-		return "Insert card no.";
-	}
-	
 	
 	return true;
 	}
-
-
-

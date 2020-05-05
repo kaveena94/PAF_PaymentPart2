@@ -104,7 +104,7 @@ public class Payment {
 			
 			String newPayment = readPay();
 			 output = "{\"status\":\"success\", \"data\": \"" +
-					 newPayment + "\"}"; 
+			 newPayment + "\"}"; 
 			 
 			 
 		} catch (Exception e) {
